@@ -1,0 +1,115 @@
+/* Header.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white; /* Couleur du texte en vert */
+}
+
+/* Logo styling */
+.header-logo {
+  max-height: 50px; /* Taille raisonnable pour le logo */
+  width: auto;
+  margin-right: 20px; /* Espacement avec le reste */
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20%;
+  align-items: center;
+}
+
+
+/* Style par défaut des liens */
+.header-nav a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: white; /* Couleur par défaut */
+  font-size: 1rem; /* Taille du texte */
+  transition: color 0.3s ease; /* Animation fluide */
+}
+
+/* Changement de couleur au survol */
+.header-nav a:hover {
+  color: #007BFF; /* Bleu par exemple, personnalisez selon vos goûts */
+}
+
+
+.search-bar {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #555;
+  color: green; /* Couleur du texte en vert */
+  cursor: pointer;
+}
+
+.auth-buttons button:hover {
+  background-color: #777;
+}
+
+.search-container {
+  position: relative;
+  width: 250px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-results {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.search-item:hover {
+  background-color: #0062be;
+}
+
+.loading-text {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+}
