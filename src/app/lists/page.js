@@ -150,7 +150,7 @@ function ListsPage() {
     const userId = decodedToken?.id;
 
     try {
-      const response = await fetch(`${API_URL}:3000/api/list/remove`, {
+      const response = await fetch(`${API_URL}/api/list/remove`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
