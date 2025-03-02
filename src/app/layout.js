@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from 'next/font/google'
 import { AuthProvider } from '@/components/AuthContext'
+import Script from 'next/script'
 
 import './globals.css'
 
@@ -35,6 +36,20 @@ export default function RootLayout({ children }) {
             src="/tarteaucitron/tarteaucitron.min.js"
             async={false} // Charger de façon synchrone
           />
+
+
+          {/* Google Analytics */}
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BTPWGJ6YHV" />
+          <Script id="google-analytics">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BTPWGJ6YHV');
+            `}
+          </Script>
+
+
           <link rel="icon" href="/logo_culthive_svg.svg" />
         </head>
 
