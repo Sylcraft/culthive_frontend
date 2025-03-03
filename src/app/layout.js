@@ -37,7 +37,6 @@ export default function RootLayout({ children }) {
             async={false} // Charger de façon synchrone
           />
 
-
           {/* Google Analytics */}
           <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BTPWGJ6YHV" />
           <Script id="google-analytics">
@@ -48,7 +47,6 @@ export default function RootLayout({ children }) {
               gtag('config', 'G-BTPWGJ6YHV');
             `}
           </Script>
-
 
           <link rel="icon" href="/logo_culthive_svg.svg" />
         </head>
