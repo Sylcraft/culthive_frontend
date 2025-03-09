@@ -16,7 +16,7 @@ const TarteConsent = () => {
           console.log('Tarteaucitron disponible et défini')
           tarteaucitron.init({
             privacyUrl:
-              'http://localhost:3001/rgpd/politique-de-confidentialite', // URL de la politique de confidentialité
+              'https://culthive-frontend.vercel.app/rgpd/politique-de-confidentialite', // URL de la politique de confidentialité
             bodyPosition: 'bottom', // Position de la bannière
             hashtag: '#tarteaucitron', // Hashtag pour ouvrir le panneau
             cookieName: 'tarteaucitron', // Nom du cookie
