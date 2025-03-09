@@ -27,18 +27,17 @@ export default function RootLayout({ children }) {
     <AuthProvider>
       <html lang="fr">
         <head>
+          {/* Ajouter le fichier CSS de Tarteaucitron */}
           <link
             rel="stylesheet"
             href="/tarteaucitron/css/tarteaucitron.min.css"
           />
-          {/* Ajouter le script JavaScript de Tarteaucitron */}
-          <script
-            src="/tarteaucitron/tarteaucitron.min.js"
-            async={false} // Charger de façon synchrone
-          />
 
           {/* Google Analytics */}
-          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-BTPWGJ6YHV" />
+          <Script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-BTPWGJ6YHV"
+          />
           <Script id="google-analytics">
             {`
               window.dataLayer = window.dataLayer || [];
@@ -53,6 +52,57 @@ export default function RootLayout({ children }) {
 
         <body className={`${geistSans.variable} ${geistMono.variable}`}>
           {children}
+
+          {/* Ajouter Tarteaucitron JS à la fin du body */}
+          <Script
+            src="/tarteaucitron/tarteaucitron.min.js"
+            strategy="afterInteractive"
+          />
+
+ {/* Initialisation de Tarteaucitron */}
+ <Script
+            id="tarteaucitron-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                if (typeof tarteaucitron !== 'undefined') {
+                  tarteaucitron.init({
+                    "privacyUrl": "", /* URL de la politique de confidentialité */
+                    "bodyPosition": "top", /* Position de la bannière */
+                    "hashtag": "#tarteaucitron", /* Hashtag pour ouvrir le panneau */
+                    "cookieName": "tarteaucitron", /* Nom du cookie */
+                    "orientation": "middle", /* Position de la bannière */
+                    "groupServices": true, /* Grouper les services par catégorie */
+                    "showDetailsOnClick": true, /* Cliquer pour ouvrir la description */
+                    "serviceDefaultState": "wait", /* Statut par défaut */
+                    "showAlertSmall": false, /* Afficher la petite bannière */
+                    "cookieslist": false, /* Afficher la liste des cookies */
+                    "closePopup": true, /* Afficher un X pour fermer */
+                    "showIcon": true, /* Afficher un icône pour ouvrir le panneau */
+                    "iconPosition": "BottomRight", /* Position de l'icône */
+                    "adblocker": false, /* Afficher un message si un Adblocker est détecté */
+                    "DenyAllCta": true, /* Bouton pour refuser tout */
+                    "AcceptAllCta": true, /* Bouton pour accepter tout */
+                    "highPrivacy": true, /* Attendre le consentement */
+                    "alwaysNeedConsent": false, /* Demander le consentement même pour les services "Privacy by design" */
+                    "handleBrowserDNTRequest": false, /* Refuser tout si Do Not Track est activé */
+                    "removeCredit": false, /* Retirer le lien de crédit vers tarteaucitron.io */
+                    "moreInfoLink": true, /* Lien "En savoir plus" */
+                    "useExternalCss": false, /* Ne pas utiliser un CSS externe */
+                    "useExternalJs": false, /* Ne pas utiliser un JS externe */
+                    "mandatory": true, /* Afficher un message pour les cookies obligatoires */
+                    "mandatoryCta": false, /* Ne pas afficher de bouton pour les cookies obligatoires */
+                    "googleConsentMode": true, /* Activer le Google Consent Mode */
+                    "bingConsentMode": true, /* Activer le Bing Consent Mode */
+                    "partnersList": true /* Afficher le nombre de partenaires */
+                  });
+                } else {
+                  console.error('Le script Tarteaucitron n\'a pas été chargé correctement.');
+                }
+              `,
+            }}
+          ></Script>
+
         </body>
       </html>
     </AuthProvider>
