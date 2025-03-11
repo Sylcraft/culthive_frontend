@@ -61,4 +61,4 @@ const TarteConsent = () => {
   return <div></div> // Tu peux aussi ajouter un message ou un autre contenu dans ce div
 }
 
-export default TarteConsent
+export default TarteConsent;
