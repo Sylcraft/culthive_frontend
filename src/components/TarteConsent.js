@@ -43,6 +43,8 @@ const TarteConsent = () => {
             googleConsentMode: true, // Activer le Google Consent Mode
             partnersList: false, // Afficher le nombre de partenaires
           })
+          tarteaucitron.user.gtagUa = 'G-BTPWGJ6YHV'
+          ;(tarteaucitron.job = tarteaucitron.job || []).push('gtag')
         } else {
           console.error(
             "Le script Tarteaucitron n'a pas été chargé correctement."
@@ -61,4 +63,4 @@ const TarteConsent = () => {
   return <div></div> // Tu peux aussi ajouter un message ou un autre contenu dans ce div
 }
 
-export default TarteConsent;
+export default TarteConsent
