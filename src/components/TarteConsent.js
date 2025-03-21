@@ -14,6 +14,7 @@ const TarteConsent = () => {
         // Maintenant que le script est chargé, on peut l'initialiser
         if (typeof tarteaucitron !== 'undefined') {
           console.log('Tarteaucitron disponible et défini')
+          const privacyUrl = `${window.location.origin}/rgpd/politique-de-confidentialite`;
           tarteaucitron.init({
             privacyUrl:
               'https://culthive-frontend.vercel.app/rgpd/politique-de-confidentialite', // URL de la politique de confidentialité
