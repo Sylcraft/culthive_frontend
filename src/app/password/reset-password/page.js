@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 
 import Header from '@/components/Header'
@@ -77,5 +77,15 @@ export default function ResetPassword() {
       </div>
       <Footer />
     </div>
+  )
+}
+
+export default function ResetPassword() {
+  return (
+    <Suspense fallback={<p>Chargement...</p>}>
+      <Header />
+      <ResetPasswordContent />
+      <Footer />
+    </Suspense>
   )
 }
