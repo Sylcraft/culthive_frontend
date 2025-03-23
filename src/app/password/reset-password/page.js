@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 
 import './style_reset-password.css'
 
-export default function ResetPassword() {
+function ResetPasswordContent() {
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
