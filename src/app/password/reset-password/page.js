@@ -8,6 +8,8 @@ import Footer from '@/components/Footer'
 import './style_reset-password.css'
 
 function ResetPasswordContent() {
+  const API_URL = process.env.NEXT_PUBLIC_API_URL
+
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState('')
@@ -32,7 +34,7 @@ function ResetPasswordContent() {
 
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/reset-password`,
+        `${API_URL}/api/reset-password`,
         {
           method: 'POST',
           headers: {
