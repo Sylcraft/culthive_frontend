@@ -91,24 +91,20 @@
 .btn {
   padding: 10px 20px;
   border-radius: 4px;
-  border: 2px solid var(--bleu-foncé); /* Bordure bleue par défaut */
-  background-color: #fff; /* Fond blanc */
-  color: var(--bleu-foncé); /* Texte bleu */
+  border: 2px solid var(--bleu-clair); /* Bordure bleue par défaut */
+  background-color: var(--bleu-clair); /* Fond blanc */
+  color: black; /* Texte bleu */
   cursor: pointer;
   transition: all 0.3s ease; /* Transition pour l'effet au survol */
-}
-
-/* Connexion et Inscription */
-.btn.login,
-.btn.signup {
-  border-color: var(--bleu-foncé); /* Bordure bleue */
+  font-weight: bold;
 }
 
 .btn.login:hover,
 .btn.signup:hover {
-  background-color: var(--bleu-clair); /* Fond bleu au survol */
+  background-color: var(--bleu-foncé); /* Fond bleu au survol */
   color: black; /* Texte blanc au survol */
-  border-color: var(--bleu-clair); /* Bordure plus foncée au survol */
+  border-color: var(--bleu-foncé); /* Bordure plus foncée au survol */
+  font-weight: bold;
 }
 
 /* Profil */
