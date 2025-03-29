@@ -1,8 +1,8 @@
-import { Geist, Geist_Mono } from 'next/font/google';
-import { AuthProvider } from '@/components/AuthContext';
-import Script from 'next/script';
-import TarteConsent from '@/components/TarteConsent';
-import './globals.css';
+import { Geist, Geist_Mono } from 'next/font/google'
+import { AuthProvider } from '@/components/AuthContext'
+import { GoogleAnalytics } from '@next/third-parties/google'
+import TarteConsent from '@/components/TarteConsent'
+import './globals.css'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -27,21 +27,8 @@ export default function RootLayout({ children }) {
     <AuthProvider>
       <html lang="fr">
         <head>
-
           {/* Google Tag Manager - Head */}
-          <Script
-            id="gtm-script"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','G-BTPWGJ6YHV');
-              `,
-            }}
-          />
+          <GoogleAnalytics gaId="G-BTPWGJ6YHV" />
 
           {/* Ajouter le fichier CSS de Tarteaucitron */}
           <link
