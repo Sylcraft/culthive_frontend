@@ -1,6 +1,9 @@
 'use client'
 import { useEffect, useState } from 'react'
 
+import Header from '@/components/Header'
+import Footer from '@/components/Footer' 
+
 export default function ReviewsPage() {
   const API_URL = process.env.NEXT_PUBLIC_API_URL
 
@@ -54,6 +57,7 @@ export default function ReviewsPage() {
 
   return (
     <div>
+      <Header />
       <h1>Gestion des Reviews</h1>
       <ul>
         {reviews.map((review) => (
@@ -66,6 +70,7 @@ export default function ReviewsPage() {
           </li>
         ))}
       </ul>
+      <Footer />
     </div>
   )
 }

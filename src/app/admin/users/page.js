@@ -1,6 +1,9 @@
 'use client'
 import { useEffect, useState } from 'react'
 
+import Header from '@/components/Header'
+import Footer from '@/components/Footer' 
+
 export default function UsersPage() {
   const API_URL = process.env.NEXT_PUBLIC_API_URL 
 
@@ -52,6 +55,7 @@ export default function UsersPage() {
 
   return (
     <div>
+      <Header />
       <h1>Gestion des Utilisateurs</h1>
       <ul>
         {users.map((user) => (
@@ -65,6 +69,7 @@ export default function UsersPage() {
           </li>
         ))}
       </ul>
+      <Footer />
     </div>
   )
 }
