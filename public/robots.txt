@@ -7,4 +7,3 @@ Host: https://culthive.fictyverse.com/
 
 # Sitemaps
 Sitemap: https://culthive.fictyverse.com/sitemap.xml
-Sitemap: https://www.culthive.fictyverse.com/sitemap-0.xml
